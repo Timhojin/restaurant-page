@@ -2,14 +2,13 @@ import pastaS from "./pasta.jpg";
 import steakS from "./steak.jpg";
 import lasagnaS from "./lasagna.jpg";
 import { rmPrevious } from "./rmPrevious";
+import "./css/menu.css";
 
 export function Menu() {
   rmPrevious();
 
   const content = document.getElementById("content");
-
-  const heading = document.createElement("h1");
-  heading.textContent = "Menu";
+  content.className = "menu-page";
 
   const pastaH3 = document.createElement("h3");
   const steakH3 = document.createElement("h3");
@@ -25,11 +24,20 @@ export function Menu() {
   steak.src = steakS;
   lasagna.src = lasagnaS;
 
-  content.appendChild(heading);
-  content.appendChild(pastaH3);
-  content.appendChild(pasta);
-  content.appendChild(steakH3);
-  content.appendChild(steak);
-  content.appendChild(lasagnaH3);
-  content.appendChild(lasagna);
+  const div1 = document.createElement("div");
+  const div2 = document.createElement("div");
+  const div3 = document.createElement("div");
+  div1.className = "divs";
+  div2.className = "divs";
+  div3.className = "divs";
+
+  content.appendChild(div1);
+  content.appendChild(div2);
+  content.appendChild(div3);
+  div1.appendChild(pastaH3);
+  div1.appendChild(pasta);
+  div2.appendChild(steakH3);
+  div2.appendChild(steak);
+  div3.appendChild(lasagnaH3);
+  div3.appendChild(lasagna);
 }

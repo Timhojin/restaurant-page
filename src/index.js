@@ -1,7 +1,7 @@
 import { HomePage } from "./HomePage.js";
 import { Menu } from "./Menu.js";
 import { About } from "./About.js";
-import "./styles.css";
+import "./css/nav.css";
 
 HomePage();
 document.getElementById("home").addEventListener("click", () => HomePage());

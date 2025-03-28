@@ -3,5 +3,6 @@ export function rmPrevious() {
   if (content.hasChildNodes()) {
     content.innerHTML = "";
     content.style.backgroundImage = "none";
+    content.className = "";
   }
 }
